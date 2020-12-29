@@ -36,12 +36,10 @@ header {
             margin: 0;
             display: flex;
             li a {
-                padding: 3em;
+                padding: 1em;
 
                 &:hover {
                     background-color: lighten($primary, 10%);
-                    border: 1px;
-                    border-radius: 15000px;
                     transition: 0.5s;
                 }
             }
