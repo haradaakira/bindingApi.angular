@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary: rgb(35, 145, 235);
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(to right, white, $primary, $primary);
+    padding: 1em 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a.logo {
+        font-weight: 900;
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            li a {
+                padding: 3em;
+
+                &:hover {
+                    background-color: lighten($primary, 10%);
+                    border: 1px;
+                    border-radius: 15000px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    
+}
