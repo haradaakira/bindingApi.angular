@@ -1,13 +1,17 @@
-<h1>Conjunto de estudos</h1>
+<h1>Conjunto de estudos:</h1>
+<ul>
+    <li>Foi trabalhado alguns dos recursos do Angular, aproveitando a ocasião para aperfeiçoar o CSS.</li><br>
+    <li>Neste processo, foi utilizado o GIT para versionamento e Github para hospedagem.</li>
+  </ul>  
 <hr><br><br>
 
 <div class="play-container">
-    <h3>Estudo de data binding:</h3>
+    <h3>Data binding:</h3>
     <p>Você clicou <span (click)="countClick()" >nisso</span> {{ clickCounter }} vezes!</p>
 </div>
 
 <div class="play-container">
-    <h3>Estudo de two-way data binding:</h3>
+    <h3>Two-way data binding:</h3>
     <p>
         <input type="text" [(ngModel)]="name">
         <br>
@@ -24,7 +28,7 @@
 
 <div class="play-container" [ngClass]="setClasses()">
 
-    <h3>Estudo de data binding com condicional em elementos e estilos:</h3>
+    <h3>Data binding com condicional em elementos e estilos:</h3>
     <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
         <p>O contador de cliques <strong>é MAIOR que</strong> 4!</p>
     </ng-template>
@@ -33,5 +37,4 @@
         <p>O contador de cliques <strong>é menor ou igual</strong> a 4!</p>
     </ng-template>
     
-
 </div>

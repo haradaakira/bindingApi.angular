@@ -1,1 +1,13 @@
-<p>list works!</p>
+<h1>Estudo de API no Angular 10:</h1>
+
+<hr><br>
+
+<h3>API livre com cadastros de cervejarias:</h3>
+
+<ul *ngIf="brews">
+    <li *ngFor="let brew of brews">
+      <p class="name">{{ brew.name }}</p>
+      <p class="country">{{ brew.country }}</p>
+      <a class="site" href="{{ brew.website_url }}">Entrar</a>
+    </li>
+  </ul>
