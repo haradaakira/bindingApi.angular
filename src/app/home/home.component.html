@@ -1,1 +1,37 @@
-<p>home works!</p>
+<h1>Conjunto de estudos</h1>
+<hr><br><br>
+
+<div class="play-container">
+    <h3>Estudo de data binding:</h3>
+    <p>Você clicou <span (click)="countClick()" >nisso</span> {{ clickCounter }} vezes!</p>
+</div>
+
+<div class="play-container">
+    <h3>Estudo de two-way data binding:</h3>
+    <p>
+        <input type="text" [(ngModel)]="name">
+        <br>
+        <strong>Você digitou: </strong> {{ name }}
+    </p>
+</div>
+
+<!-- <div class="play-container" [ngStyle]="{
+    'background-color': clickCounter > 4  ? 'rgb(115, 185, 242)' : 'white',
+    'border': clickCounter > 4 ? '4px solid black' : none
+}"> -->
+
+<!-- <div class="play-container" [class.active]="clickCounter > 4"> -->
+
+<div class="play-container" [ngClass]="setClasses()">
+
+    <h3>Estudo de data binding com condicional em elementos e estilos:</h3>
+    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+        <p>O contador de cliques <strong>é MAIOR que</strong> 4!</p>
+    </ng-template>
+    
+    <ng-template #none>
+        <p>O contador de cliques <strong>é menor ou igual</strong> a 4!</p>
+    </ng-template>
+    
+
+</div>
