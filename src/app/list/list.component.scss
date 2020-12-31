@@ -12,7 +12,7 @@ ul {
     flex-wrap: wrap;
 
     li {
-        background: rgb(238, 238, 238);
+        background: rgb(226, 236, 255);
         padding: 1em;
         margin-right: 15px;
         width: 25%;
@@ -21,6 +21,7 @@ ul {
         display: flex;
         flex-direction: column;
         border: 1px solid lightblue;
+        border-radius: 3px;
         transition: 0.5s;
         
         /* @media only screen and (max-width: 500px){

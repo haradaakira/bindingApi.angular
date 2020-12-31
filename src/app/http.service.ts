@@ -12,4 +12,8 @@ export class HttpService {
     return this.http.get('https://api.openbrewerydb.org/breweries')
   }
 
+  myMethodCEP(cep: string) {
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json/`)
+  }
+
 }

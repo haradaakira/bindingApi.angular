@@ -1,0 +1,32 @@
+<h1>Estudo de API no Angular 10:</h1>
+
+<hr><br>
+
+<h3>API livre de busca de endereço pelo CEP:</h3>
+
+<div class="play-container">
+    <h3>Digite o CEP e clique fora do campo de texto:</h3>
+    
+        <input type="text" [(ngModel)]="cep" (blur)="cepApi()">
+        <!-- <span (click)="cepApi()" >nisso</span> -->
+        <br>
+        
+        <!-- <div class="end" *ngFor="let item of this.cepapi| keyvalue">
+            {{ item.key }} - {{ item.value }}
+          </div>
+
+        <ul [ngIf]='cep'>
+            <li>
+                <p class="logradouro">{{ cepapi.logradouro }}</p>
+            </li>
+        </ul> -->
+
+        <div *ngIf='cepapi' class="end">
+            <p><strong>Logradouro:</strong> {{ this.cepapi.logradouro }}</p>
+            <p><strong>Bairro:</strong> {{ this.cepapi.bairro }}</p>
+            <p><strong>Cidade:</strong> {{ this.cepapi.localidade }}</p>
+            <p><strong>Estado:</strong> {{ this.cepapi.uf }}</p>
+            <p><strong>CEP inserido:</strong> {{ this.cepapi.cep }}</p>
+        </div>
+
+</div>
